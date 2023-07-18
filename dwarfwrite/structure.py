@@ -271,6 +271,7 @@ class DWARFStructurer:
         if sub is not None:
             result.update({
                 "tag": enums.ENUM_DW_TAG['DW_TAG_pointer_type'],
+                enums.ENUM_DW_AT['DW_AT_byte_size']: self.type_basic_size(ty),
                 enums.ENUM_DW_AT['DW_AT_type']: self.process_type(sub)
             })
             return
